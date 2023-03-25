@@ -36,5 +36,24 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        internal void Peek() //To show the top most element 
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of the stack",this.top.data);
+        }
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty, deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
     }
 }
