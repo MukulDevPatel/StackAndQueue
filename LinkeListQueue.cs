@@ -41,5 +41,21 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty, deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("Value dequeue is {0}", this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+        }
     }
 }
